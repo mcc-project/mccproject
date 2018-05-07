@@ -1,0 +1,26 @@
+[Unit]
+Description=MCC's distributed currency daemon
+After=network.target
+
+[Service]
+User=mcc
+Group=mcc
+
+Type=forking
+PIDFile=/var/lib/mccd/mccd.pid
+
+ExecStart=/usr/bin/mccd -daemon -pid=/var/lib/mccd/mccd.pid \
+          -conf=/etc/mcc/mcc.conf -datadir=/var/lib/mccd
+
+ExecStop=-/usr/bin/mcc-cli -conf=/etc/mcc/mcc.conf \
+         -datadir=/var/lib/mccd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

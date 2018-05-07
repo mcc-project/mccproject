@@ -1,0 +1,26 @@
+# /etc/conf.d/mccd: config file for /etc/init.d/mccd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/mcc/mcc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/mccd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/mccd.pid"
+
+# Where to write mccd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/mccd"
+
+# User and group to own mccd process
+#BITCOIND_USER="mcc"
+#BITCOIND_GROUP="mcc"
+
+# Path to mccd executable
+#BITCOIND_BIN="/usr/bin/mccd"
+
+# Nice value to run mccd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

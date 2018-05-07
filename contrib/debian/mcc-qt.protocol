@@ -1,0 +1,11 @@
+[Protocol]
+exec=mcc-qt '%u'
+protocol=mcc
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

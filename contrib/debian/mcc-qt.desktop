@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MCC
+Comment=MCC P2P Cryptocurrency
+Comment[fr]=MCC, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MCC, eşten eşe kriptografik sanal para birimi
+Exec=mcc-qt %u
+Terminal=false
+Type=Application
+Icon=mcc128
+MimeType=x-scheme-handler/mcc;
+Categories=Office;Finance;
